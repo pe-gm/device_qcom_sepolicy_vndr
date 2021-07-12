@@ -70,3 +70,6 @@ allow hal_camera_default gpu_device:chr_file rw_file_perms;
 hal_attribute_hwservice(hal_camera, vendor_hal_camera_postproc_hwservice);
 
 dontaudit hal_camera_default vendor_xdsp_device:chr_file { open read};
+
+# Display service access
+binder_use(hal_camera_default)
